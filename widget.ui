@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1314</width>
+    <height>983</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ARP SPOOFING SOFTWARE</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="styleSheet">
+        <string notr="true">font: 700 9pt &quot;Segoe Print&quot;;</string>
+       </property>
+       <property name="title">
+        <string>Mes Infos</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(59, 171, 7);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Mon Adresse IP : </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="my_ip_label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(59, 171, 7);
+font: 700 9pt &quot;Source Code Pro&quot;;
+background-color: rgb(255, 255, 255);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(59, 171, 7);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Mon adresse MAC :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="my_mac_label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(59, 171, 7);
+font: 700 9pt &quot;Source Code Pro&quot;;
+background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="styleSheet">
+        <string notr="true">font: 700 9pt &quot;Segoe Print&quot;;</string>
+       </property>
+       <property name="title">
+        <string>Passerelle</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(161, 17, 7);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Adresse Ip de la passerelle : </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="gateway_ip_label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(161, 17, 7);
+background-color: rgb(255, 255, 255);
+font: 700 9pt &quot;Source Code Pro&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(161, 17, 7);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Adresse Mac de la passerelle : </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="gateway_mac_label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(161, 17, 7);
+background-color: rgb(255, 255, 255);
+font: 700 9pt &quot;Source Code Pro&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="styleSheet">
+      <string notr="true">font: 700 9pt &quot;Segoe Print&quot;;</string>
+     </property>
+     <property name="title">
+      <string>Machines Cibles</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(17, 11, 185);
+background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Ip de la Machine : </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="target_ip_comboBox">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(17, 11, 185);
+background-color: rgb(255, 255, 255);
+font: 700 9pt &quot;Source Code Pro&quot;;
+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(17, 11, 185);
+background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>MAC correspondant : </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="target_mac_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(17, 11, 185);
+background-color: rgb(255, 255, 255);
+font: 700 9pt &quot;Source Code Pro&quot;;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>974</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="operation_output_TextEdit"/>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="wifiCrackingOperationTextEdit"/>
+   </item>
+   <item>
+    <widget class="QListView" name="wifiListView"/>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="wifiCrackerGroupBox">
+     <property name="title">
+      <string>Choisir le nom du wifi que vous voulez attaquer</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QComboBox" name="wifiCrackercomboBox"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QPushButton" name="wifiCrackerButton">
+          <property name="text">
+           <string>Lancer L'attaque</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stopWifiCrackingButton">
+          <property name="text">
+           <string>Stopper L'attaque</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="wifiRescanButton">
+        <property name="text">
+         <string>Rescan Wifi Network</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <item>
+      <widget class="QPushButton" name="startButton">
+       <property name="text">
+        <string>Lancer le spoofing</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="stopButton">
+       <property name="text">
+        <string>arrêter le spoofing</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="reloadMyInfoButton">
+     <property name="text">
+      <string>Reload My Info</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="refreshButton">
+     <property name="text">
+      <string>Refresh</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

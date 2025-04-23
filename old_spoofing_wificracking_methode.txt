@@ -1,0 +1,46 @@
+    connect(m_socket_toWriteToPythonServer, &QTcpSocket::connected, this, &Widget::socket_toWriteToPythonServerReady);
+    connect(m_socket_toWriteToPythonServer, &QTcpSocket::stateChanged, this, &Widget::socket_toWriteToPythonServerStateChanged);
+    connect(m_socket_toWriteToPythonServer, &QTcpSocket::readyRead, this, &::Widget::readDataFrompythonServer);
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// \brief connect
+    ///lancer la methode socket_toWriteToPythonServerReady lorsque le signal connected au server python est etablie
+    /// ou lancer socket_toWriteToPythonServerStateChanged si l etat du socket a changE
+    connect(m_socket_toWriteToArpPythonServer, &QTcpSocket::connected, this, &Widget::socket_toWriteToArpPythonServerReady);
+    connect(m_socket_toWriteToArpPythonServer, &QTcpSocket::stateChanged, this, &Widget::socket_toWriteToArpPythonServerStateChanged);
+    connect(m_socket_toWriteToArpPythonServer, &QTcpSocket::readyRead, this, &Widget::readDataFromArpPythonServer);
+void Widget::socket_toWriteToPythonServerStateChanged(QAbstractSocket::SocketState socketState)
+{
+    QColor current_color = ui->wifiCrackingOperationTextEdit->textColor();
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// si le socket du wifi cracking deconnectE de l'hote on informe l utilisateur en affichant le text dans le textEdit qui affiche les operations en cours
+    if(socketState == QAbstractSocket::UnconnectedState){
+        const QRgb rgb = 0xff990000;
+        ui->wifiCrackingOperationTextEdit->setTextColor(QColor(rgb));
+        ui->wifiCrackingOperationTextEdit->append("Wifi Password Cracking socket disconnected");
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// si le socket du wifi cracking est en phase de recherche de l'hote on informe l utilisateur en affichant le text dans le textEdit qui affiche les operations en cours
+    if(socketState == QAbstractSocket::HostLookupState){
+        const QRgb rgb = 0xff990000;
+        ui->wifiCrackingOperationTextEdit->setTextColor(QColor(rgb));
+        ui->wifiCrackingOperationTextEdit->append("Performing a host name lookup");
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// si le socket du wifi cracking a trouve l hote et tente de se connecter on informe l utilisateur en affichant le text dans le textEdit qui affiche les operations en cours
+    if(socketState == QAbstractSocket::ConnectingState){
+        const QRgb rgb = 0xff000099;
+        ui->wifiCrackingOperationTextEdit->setTextColor(QColor(rgb));
+        ui->wifiCrackingOperationTextEdit->append("Wifi Password Cracking Server Hostname Find Started to establish a connection");
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// si le socket du wifi cracking est pret on informe l utilisateur en affichant le text dans le textEdit qui affiche les operations en cours
+    if(socketState == QAbstractSocket::ConnectedState){
+        const QRgb rgb = 0xff00cc00;
+        ui->wifiCrackingOperationTextEdit->setTextColor(QColor(rgb));
+        ui->wifiCrackingOperationTextEdit->append("Connected to the Wifi Password Cracking Server waiting for socket pairing...");
+    }
+    ui->wifiCrackingOperationTextEdit->setTextColor(current_color);
+    qDebug()<< "wifi socket state : " << socketState;
+}
